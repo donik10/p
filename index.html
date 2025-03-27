@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div id="wrapper"></div>
+</body>
+</html>
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор цвета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #content {
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        let textColor = prompt("Введите цвет текста:", "black");
+        let bgColor = prompt("Введите цвет фона:", "white");
+        let loremCount = parseInt(prompt("Введите количество строк Lorem Ipsum:", "500");
+        
+        textColor = textColor && CSS.supports("color", textColor);
+        bgColor = bgColor && CSS.supports("color", bgColor);
+        
+        document.getElementById("content").style.color = textColor;
+        document.body.backgroundColor = bgColor;
+        document.getElementById("content").innerHTML = Array(loremCount).fill("Lorem ipsum dolor sit amet, consectetur adipiscing elit.").join("<br>");
+    </script>
+</body>
+</html>
